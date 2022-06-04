@@ -7,11 +7,16 @@ There are comments in the script which should help you setup your own config.
 
 ## Layout | Buttons Map
 If you run the script as it is without changing anything this will be your layout:
-![Buttons Map](img/buttons_map.png)
+
+<img src="img/buttons_map.png" width="400"/>
+
 Positions of buttons in config:
-![Positions of Buttons](img/positions_of_buttons.png)
+
+<img src="img/positions_of_buttons.png" width="400"/>
+
 It is design to work with left hand:
-![Left Hand Usage](img/left_hand_usage.png)
+
+<img src="img/left_hand_usage.png" width="400"/>
 
 ## Settings applied
 1. Reassign buttons to new positions.
