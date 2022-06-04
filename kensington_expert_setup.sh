@@ -3,7 +3,7 @@
 ## Desirable Buttons Map
 # LClick MClick
 #
-# Back RClick
+# Scroll_Lock/Back RClick
 #
 # P - Position
 # B - Button

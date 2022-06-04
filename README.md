@@ -1,38 +1,30 @@
-# kensington-expert-trackball-linux-config
-
-This is a configuration script for the Kensington Expert trackball that remaps some of the buttons and edits some props.
-
-This scripts dependancies are `xinput` `grep` and `sed` which should be installed on all distros by default.
-
+# Kensington Expert Trackball Linux Config
+This is a configuration script for the Kensington Expert Wired trackball
+that remaps the buttons and edits some props.
+This scripts dependencies are `xinput`, `grep` and `sed` 
+which should be installed on all distros by default.
 There are comments in the script which should help you setup your own config.
 
-# Layout
+## Layout | Buttons Map
+If you run the script as it is without changing anything this will be your layout:
+![Buttons Map](img/buttons_map.png)
+Positions of buttons in config:
+![Positions of Buttons](img/positions_of_buttons.png)
+It is design to work with left hand:
+![Left Hand Usage](img/left_hand_usage.png)
 
-If you run the script as is without changing anything this will be your layout:
-```
-______________   _________  ________________
-| back       |   |       |  | right click  |
---------------   |       |  ----------------
-______________   |       |  ________________
-| left click |   |       |  | middle click |
---------------   ---------  ----------------
+## Settings applied
+1. Reassign buttons to new positions.
+2. Acceleration enabled (`Normal` speed). Three options for acceleration: `Off`, `Normal`, `Fast`.
+3. Fast scrolling by press/hold button and moving ball. 
+`Scroll Lock` over `Back` button (can be changed in script).
+    - (Default) Press and release button `Scroll Lock` (position 1) and move ball.
+    - (Optional) Press and hold `Right click` (position 3) by thumb and move ball.
+4. (Optional) You can change fast scrolling speed (ball+button). Range: 10 (fastest) - 50 (slowest) (default 15).
 
-```
-1. Natural scrolling will be enabled. ( scrolling is smoother with this on )
-2. Ball acceliration will be disabled.
-3. Middle click + ball roll can also be used to scroll. ( very smooth and fast scrolling )
-
-# Usage
-You can run the script simpy by calling the script `./Kensington_Expert_Setup.sh` there is no need for root.
+## Usage
+You can run the script simpy by calling the script `./kensington_expert_setup.sh` there is no need for root.
 
 Or a better way is to put it in your desktop environment or window manager config, so that it runs when you login, the script also checks if the trackball is present before running any commands so its safe to use it like this.
 
-I use i3 window manager so I put this in my i3 config `exec_always --no-startup-id ~/scrips/Kensington_Expert_Setup.sh`
-
-# Todo
-I want to change the scroll speed without using any other external programs but this trackball is missing a property in xinput props to be able to do so.
-
-The kensington software on windows allows you to press two buttons at once for a different input which is pretty cool, so I'm looking for a way to achieve this on linux too. It doesn't seem possible with xinput to my knowledge. 
-
-# Video
-[![Youtube](https://img.youtube.com/vi/hIAJ9Icq3KU/0.jpg)](https://www.youtube.com/watch?v=hIAJ9Icq3KU)
+I use i3 window manager so I put this in my i3 config `exec_always --no-startup-id ~/.config/i3/kensington_expert_setup.sh`
